@@ -1,14 +1,16 @@
 ## Projeto Sistema de Atividades Especiais - GRUPO A
 
 ### Integrantes
-Jorge Luiz da Silva - @jlsilva01<br>
-Integrante 2 - conta github<br>
-Integrante 3 - conta github<br>
+Luiz Felipe Zomer - @LuizZomer<br>
+Luiz Filipe Linhares - @LuizFilipeLinhares<br>
+Willian Minatto - @willianminatto<br>
+Daniel Freitas - @DanielFreitassc<br>
+Augustos Preis - @AugustoPreis
 ...
 
 ### Modelo Físico
 Utilizamos a ferramenta de modelagem de dados [dbdiagram.io](https://dbdiagram.io/) para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.<br>
-Arquivo fonte: [Modelo Fisico](https://dbdiagram.io/d/6561325e3be1495787b1c71a).<br>
+Arquivo fonte: [Modelo Fisico](https://dbdiagram.io/d/6660f7fe8f6e135d4a671308).<br>
 
 ![image](https://github.com/jlsilva01/projeto_final_bd2_satc_2023/assets/484662/1fefa9fd-868c-4209-8cc5-d32cd73fa46d)
   
