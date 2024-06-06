@@ -12,7 +12,9 @@ public class FuncionarioMapper {
         funcionarioEntity.getNome(),
         funcionarioEntity.getSobrenome(),
         funcionarioEntity.getCpf(),
-        funcionarioEntity.getContato()
+        funcionarioEntity.getContato(),
+        funcionarioEntity.getSalario(),
+        funcionarioEntity.getFuncao()
         );
     }
 
@@ -22,6 +24,8 @@ public class FuncionarioMapper {
         .sobrenome(funcionarioDTO.sobrenome())
         .cpf(funcionarioDTO.cpf())
         .contato(funcionarioDTO.contato())
+        .salario(funcionarioDTO.salario())
+        .funcao(funcionarioDTO.funcao())
         .build();
     }
 }

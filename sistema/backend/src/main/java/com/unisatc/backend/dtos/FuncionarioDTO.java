@@ -5,7 +5,10 @@ public record FuncionarioDTO(
     String nome,
     String sobrenome,
     String cpf,
-    String contato
+    String contato,
+    Double salario,
+    String funcao
+
 ) {
     
 }

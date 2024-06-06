@@ -26,4 +26,6 @@ public class FuncionarioEntity {
     private String sobrenome;
     private String cpf;
     private String contato;
+    private Double salario;
+    private String funcao;
 }
