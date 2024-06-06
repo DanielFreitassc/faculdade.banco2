@@ -1,6 +1,6 @@
 package com.unisatc.backend.dtos;
 
-public record TipoPagamento(
+public record TipoPagamentoDTO(
     Integer id,
     String descricao
 ) {
