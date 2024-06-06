@@ -1,11 +1,12 @@
 package com.unisatc.backend.models;
 
 import java.security.Timestamp;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,10 +23,16 @@ public class ApoliceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    // private ClienteEntity cliente;
+    @ManyToOne
+    @JoinColumn(name = "cliente")
+    private ClienteEntity cliente;
     private Timestamp inicio;
     private Timestamp fim;
     private Double valor;
-    private String numero;
-    // private CelularEntity celular;
+    @ManyToOne
+    @JoinColumn(name = "celular")
+    private CelularEntity celular;
+    @ManyToOne
+    @JoinColumn(name = "funcionario")
+    private FuncionarioEntity funcionario;
 }

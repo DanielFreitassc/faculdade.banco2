@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,5 +27,7 @@ public class CelularEntity {
     private String modelo;
     private int ano;
     private String marca;
-    // private ClienteEntity cliente;
+    @ManyToOne
+    @JoinColumn(name = "cliente")
+    private ClienteEntity cliente;
 }

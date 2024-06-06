@@ -3,10 +3,14 @@ package com.unisatc.backend.models;
 import java.sql.Time;
 import java.time.LocalDate;
 
+import org.hibernate.annotations.ManyToAny;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,10 +30,16 @@ public class SinistroEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private LocalDate data;
-    // private ClienteEntity cliente;
-    // private CelularEntity celular;
+    @ManyToOne
+    @JoinColumn(name = "cliente")
+    private ClienteEntity cliente;
+    @ManyToOne
+    @JoinColumn(name = "celular")
+    private CelularEntity celular;
     private String local;
     private Time horario;
-    private String fornecedor;
+    @ManyToOne
+    @JoinColumn(name = "fornecedor")
+    private FornecedorEntity fornecedor;
     private String descricao;    
 }

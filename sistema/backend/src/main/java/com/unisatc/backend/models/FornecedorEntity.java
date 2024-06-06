@@ -18,12 +18,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @Table(name = "fornecedor")
 public class FornecedorEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     private String cnpj;
     private String descricao;
-    
 }

@@ -23,6 +23,7 @@ public class FuncionarioEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
-    private String cnpj;
-    private String descricao;
+    private String sobrenome;
+    private String cpf;
+    private String contato;
 }
