@@ -12,7 +12,7 @@ Augustos Preis - @AugustoPreis
 Utilizamos a ferramenta de modelagem de dados [dbdiagram.io](https://dbdiagram.io/) para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.<br>
 Arquivo fonte: [Modelo Fisico](https://dbdiagram.io/d/6660f7fe8f6e135d4a671308).<br>
 
-![image](https://github.com/jlsilva01/projeto_final_bd2_satc_2023/assets/484662/1fefa9fd-868c-4209-8cc5-d32cd73fa46d)
+![Nodelo Fisico](image.png)
   
 ### Dicionário de Dados
 As informações sobre as tabelas e índices foram documentados na planilha [template1.xlsx](dicionario_dados/template1.xlsx).
