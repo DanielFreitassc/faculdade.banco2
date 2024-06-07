@@ -28,7 +28,6 @@ public class FuncionarioService {
 
     public List<FuncionarioDTO> getAllFuncionarios() {
         List<FuncionarioEntity> funcionarios = funcionarioRepository.findAll();
-        if(funcionarios.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Nenhum funcionario cadastrado no momento");
         return funcionarios.stream().map(funcionarioMapper::toDto).toList();
     }
 

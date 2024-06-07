@@ -29,7 +29,6 @@ public class FornecedorService {
 
     public List<FornecedorDTO> getAllFornecedores() {
         List<FornecedorEntity> fornecedores = fornecedorRepository.findAll();
-        if(fornecedores.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Nenhum fornecedor cadastrado no momento");
         return fornecedores.stream().map(fornecedorMapper::toDto).toList();
     }
     

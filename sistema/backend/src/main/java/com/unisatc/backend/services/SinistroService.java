@@ -28,7 +28,6 @@ public class SinistroService {
 
     public List<SinistroDTO> getAllSinistros() {
         List<SinistroEntity> sinistros = sinistroRepository.findAll();
-        if(sinistros.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Nenhum sinistro cadastrado no momento");
         return sinistros.stream().map(sinistroMapper::toDto).toList();
     }
 

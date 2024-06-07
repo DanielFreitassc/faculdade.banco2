@@ -28,7 +28,6 @@ public class ApoliceService {
 
     public List<ApoliceDTO> getAllApolices() {
         List<ApoliceEntity> apolices = apoliceRepository.findAll();
-        if(apolices.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Nenhuma apolice cadastrada no momento");
         return apolices.stream().map(apoliceMapper::toDto).toList();
     }
 

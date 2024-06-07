@@ -28,7 +28,6 @@ public class ClienteService {
 
     public List<ClienteDTO> getAllClientes() {
         List<ClienteEntity> clienteEntities = clienteRepository.findAll();
-        if(clienteEntities.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Nenhum cliente cadastrado no momento");
         return clienteEntities.stream().map(clienteMapper::toDto).toList();
     }
 

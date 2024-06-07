@@ -29,7 +29,6 @@ public class CelularService {
 
     public List<CelularDTO> getAllCelulares() {
         List<CelularEntity> celulares = celularRepository.findAll();
-        if(celulares.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Nenhum celular cadastrado no momento");
         return celulares.stream().map(celularMapper::toDto).toList();
     }
 

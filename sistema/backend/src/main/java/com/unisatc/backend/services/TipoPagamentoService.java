@@ -28,7 +28,6 @@ public class TipoPagamentoService {
 
     public List<TipoPagamentoDTO> getAllTipoPagamentos() {
         List<TipoPagamentoEntity> tipos = tipoPagamentoRepository.findAll();
-        if(tipos.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Nenhum tipo de pagamento cadastrado no momento");
         return tipos.stream().map(tipoPagamentoMapper::toDto).toList();
     }
 

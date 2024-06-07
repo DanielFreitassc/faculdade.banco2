@@ -28,7 +28,6 @@ public class PagamentoService {
     
     public List<PagamentoDTO> getAllPagamentos() {
         List<PagamentoEntity> pagamentos = pagamentoRepository.findAll();
-        if(pagamentos.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Nenhum pagamento cadastrado no momento");
         return pagamentos.stream().map(pagamentoMapper::toDto).toList();
     }
 
