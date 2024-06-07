@@ -1,6 +1,6 @@
 package com.unisatc.backend.models;
 
-import java.security.Timestamp;
+import java.time.Instant;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,8 +28,8 @@ public class ApoliceEntity {
     @ManyToOne
     @JoinColumn(name = "cliente")
     private ClienteEntity cliente;
-    private Timestamp inicio;
-    private Timestamp fim;
+    private Instant inicio;
+    private Instant fim;
     private Double valor;
     @ManyToOne
     @JoinColumn(name = "celular")

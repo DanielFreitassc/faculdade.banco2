@@ -38,6 +38,8 @@ public class GlobalExceptionHandler {
         String errorMessage;
         if (ex.getMessage().contains("Value too long for column")) {
             errorMessage = "O valor excede o tamanho máximo permitido para a coluna.";
+        } else if (ex.getMessage().contains("foreign key constraint")) {
+            errorMessage = "A chave estrangeira que você está usando não foi encontrada.";
         } else {
             errorMessage = "Ocorreu um erro ao processar sua solicitação.";
         }

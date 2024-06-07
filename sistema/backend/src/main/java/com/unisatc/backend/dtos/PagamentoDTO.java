@@ -1,6 +1,5 @@
 package com.unisatc.backend.dtos;
 
-import java.security.Timestamp;
 import java.time.LocalDateTime;
 
 import com.unisatc.backend.models.CelularEntity;
