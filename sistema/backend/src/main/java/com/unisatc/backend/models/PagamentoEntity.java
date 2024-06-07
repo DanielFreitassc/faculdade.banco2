@@ -1,7 +1,5 @@
 package com.unisatc.backend.models;
 
-import java.security.Timestamp;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
