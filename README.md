@@ -6,7 +6,8 @@ Luiz Filipe Linhares - [@LuizFilipeLinhares](https://github.com/LuizFilipeLinhar
 Willian Minatto - [@willianminatto](https://github.com/willianminatto)<br>
 Daniel Freitas - [@DanielFreitassc](https://github.com/DanielFreitassc)<br>
 Augustos Preis - [@AugustoPreis](https://github.com/AugustoPreis)
-...
+
+---
 
 ### Modelo Físico
 Utilizamos a ferramenta de modelagem de dados [dbdiagram.io](https://dbdiagram.io/) para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.<br>
