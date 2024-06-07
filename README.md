@@ -1,11 +1,11 @@
 ## Projeto Sistema de Atividades Especiais - GRUPO A
 
 ### Integrantes
-Luiz Felipe Zomer - @LuizZomer<br>
-Luiz Filipe Linhares - @LuizFilipeLinhares<br>
-Willian Minatto - @willianminatto<br>
-Daniel Freitas - @DanielFreitassc<br>
-Augustos Preis - @AugustoPreis
+Luiz Felipe Zomer - [@LuizZomer](https://github.com/luizZomer)<br>
+Luiz Filipe Linhares - [@LuizFilipeLinhares](https://github.com/LuizFilipeLinhares)<br>
+Willian Minatto - [@willianminatto](https://github.com/willianminatto)<br>
+Daniel Freitas - [@DanielFreitassc](https://github.com/DanielFreitassc)<br>
+Augustos Preis - [@AugustoPreis](https://github.com/AugustoPreis)
 ...
 
 ### Modelo Físico
