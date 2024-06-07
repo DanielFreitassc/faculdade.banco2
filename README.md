@@ -30,12 +30,11 @@ Abaixo, segue os scripts SQL separados por tipo:
 + Functions [functions.sql](scripts_sql/functions.sql)
 
 ### Código Fonte do CRUD
-- Linguagem de Programação C# .NET.<br>
-- Framework .NET 4.6
-- Projeto Windows Forms
-- Biblioteca Entity Framework para SQL Server (nativo)
+- Linguagem de Programação Java, Javascript.<br>
+- Framework Spring,
+- Lib React
 
-[Codigo Fonte](fonte/)
+[Codigo Fonte](sistema/)
 
 ### Relatório Final
 O relatório final está disponível no arquivo [template1.docx](relatorio/template1.docx).
