@@ -7,7 +7,7 @@ import com.unisatc.backend.models.TipoPagamentoEntity;
 
 @Component
 public class TipoPagamentoMapper {
-    public TipoPagamentoDTO tDto(TipoPagamentoEntity tipoPagamentoEntity) {
+    public TipoPagamentoDTO toDto(TipoPagamentoEntity tipoPagamentoEntity) {
         return new TipoPagamentoDTO(
         tipoPagamentoEntity.getId(),
         tipoPagamentoEntity.getDescricao());
