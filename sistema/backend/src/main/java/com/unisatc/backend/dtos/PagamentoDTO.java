@@ -1,6 +1,7 @@
 package com.unisatc.backend.dtos;
 
 import java.security.Timestamp;
+import java.time.LocalDateTime;
 
 import com.unisatc.backend.models.CelularEntity;
 import com.unisatc.backend.models.ClienteEntity;
@@ -17,7 +18,7 @@ public record PagamentoDTO(
     @NotNull(message = "Salario não pode ser nulo") 
     @Min(value = 0, message = "Pagamento não pode ser negativo") Double valor,
     TipoPagamentoEntity tipo_pagamento,
-    Timestamp data,
+    LocalDateTime data,
     @NotBlank(message = "Descrição não pode ser um campo vazio") String descricao
 ) {
     

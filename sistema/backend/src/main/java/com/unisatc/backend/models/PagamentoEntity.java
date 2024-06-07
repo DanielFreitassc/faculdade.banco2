@@ -2,13 +2,13 @@ package com.unisatc.backend.models;
 
 import java.security.Timestamp;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -38,6 +38,6 @@ public class PagamentoEntity {
     @ManyToOne
     @JoinColumn(name = "tipo_pagamento")
     private TipoPagamentoEntity tipo_pagamento;
-    private Timestamp data;
+    private LocalDateTime data;
     private String descricao;
 }
