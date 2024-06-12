@@ -1,13 +1,20 @@
-DROP PROCEDURE IF EXISTS pr_imc
-GO
-
-CREATE PROCEDURE pr_imc (@massa numeric(10,2), @altura numeric(10,2), @resultado numeric(10,2) OUTPUT) AS
+CREATE OR REPLACE PROCEDURE pr_deleta_pagamentos(pr_cliente int)
+LANGUAGE plpgsql AS
+$procedure$
+DECLARE
+	qtd_clientes int;
 BEGIN
-	DECLARE @altura_quadrado numeric(10,2)
+	SELECT
+		count(cliente.id)
+	INTO qtd_clientes
+	FROM cliente
+	WHERE cliente.id = pr_cliente;
 
-	SELECT @altura_quadrado = POWER(@altura, 2)
-
-	SELECT @resultado = @massa / @altura_quadrado 
+	IF (qtd_clientes = 0) THEN
+		RAISE EXCEPTION 'Cliente inexistente';
+	END IF;
 	
-END
-GO
+	DELETE FROM pagamento
+	WHERE cliente = pr_cliente; 
+END;
+$procedure$;
