@@ -1,52 +1,185 @@
-SET IDENTITY_INSERT aluno ON 
-GO
-INSERT aluno (cd_aluno, nm_aluno, email) VALUES (1, 'MARISA MELO OLIVEIRA', 'marisa@email.com')
-GO
-INSERT aluno (cd_aluno, nm_aluno, email) VALUES (2, 'MURILO CARVALHO CARDOSO', 'murilo@email.com')
-GO
-INSERT aluno (cd_aluno, nm_aluno, email) VALUES (3, 'VINICIUS ROCHA RODRIGUES', 'vinicius@email.com')
-GO
-INSERT aluno (cd_aluno, nm_aluno, email) VALUES (4, 'CAROLINA ROCHA GOMES', 'carolina@email.com')
-GO
-INSERT aluno (cd_aluno, nm_aluno, email) VALUES (5, 'ALINE SANTOS CASTRO', 'aline@email.com')
-GO
-INSERT aluno (cd_aluno, nm_aluno, email) VALUES (6, 'LEILA CORREIA CAVALCANTI', 'leila@email.com')
-GO
-INSERT aluno (cd_aluno, nm_aluno, email) VALUES (7, 'SOPHIA CORREIA SANTOS', 'sophia@email.com')
-GO
-INSERT aluno (cd_aluno, nm_aluno, email) VALUES (8, 'JOÃO CORREIA COSTA', 'joão@email.com')
-GO
-INSERT aluno (cd_aluno, nm_aluno, email) VALUES (9, 'RAFAEL DIAS SOUZA', 'rafael@email.com')
-GO
-SET IDENTITY_INSERT aluno OFF
-GO
 
-SET IDENTITY_INSERT avaliacao ON 
-GO
-INSERT avaliacao (cd_avaliacao, ds_avaliacao, dt_abertura, dt_fechamento) VALUES (1, '1a Avaliação Banco de dados (referente as aulas 1 à 5)', CAST('2022-08-30T19:00:00.000' AS DateTime), CAST('2022-08-30T22:00:00.000' AS DateTime))
-GO
-INSERT avaliacao (cd_avaliacao, ds_avaliacao, dt_abertura, dt_fechamento) VALUES (2, '2a Avaliação Banco de dados', CAST('2022-10-24T19:00:00.000' AS DateTime), CAST('2022-10-24T22:00:00.000' AS DateTime))
-GO
-SET IDENTITY_INSERT avaliacao OFF
-GO
-  
-INSERT avaliacao_aluno (cd_avaliacao, cd_aluno, ds_avaliacao_aluno, dt_inicio, dt_fim) VALUES (1, 1, '1a Avaliação Banco de dados (referente as aulas 1 à 5)', CAST('2022-10-24T16:00:14.510' AS DateTime), CAST('2022-10-24T16:00:35.893' AS DateTime))
-GO
-INSERT avaliacao_aluno (cd_avaliacao, cd_aluno, ds_avaliacao_aluno, dt_inicio, dt_fim) VALUES (1, 2, '1a Avaliação Banco de dados', CAST('2022-10-24T16:31:27.380' AS DateTime), NULL)
-GO
-INSERT avaliacao_aluno (cd_avaliacao, cd_aluno, ds_avaliacao_aluno, dt_inicio, dt_fim) VALUES (2, 2, '2a Avaliação Banco de dados', CAST('2022-10-24T16:31:28.030' AS DateTime), CAST('2022-10-24T16:00:35.893' AS DateTime))
-GO
-INSERT avaliacao_aluno (cd_avaliacao, cd_aluno, ds_avaliacao_aluno, dt_inicio, dt_fim) VALUES (1, 4, '1a Avaliação Banco de dados', CAST('2022-10-24T16:31:25.910' AS DateTime), CAST('2022-10-24T16:00:35.893' AS DateTime))
-GO
-INSERT avaliacao_aluno (cd_avaliacao, cd_aluno, ds_avaliacao_aluno, dt_inicio, dt_fim) VALUES (2, 4, '2a Avaliação Banco de dados', CAST('2022-10-24T16:02:59.533' AS DateTime), CAST('2022-10-24T16:00:35.893' AS DateTime))
-GO
-INSERT avaliacao_aluno (cd_avaliacao, cd_aluno, ds_avaliacao_aluno, dt_inicio, dt_fim) VALUES (2, 5, '2a Avaliação Banco de dados', CAST('2022-10-24T16:31:25.020' AS DateTime), NULL)
-GO
-INSERT avaliacao_aluno (cd_avaliacao, cd_aluno, ds_avaliacao_aluno, dt_inicio, dt_fim) VALUES (1, 6, '1a Avaliação Banco de dados', CAST('2022-10-24T16:31:26.690' AS DateTime), NULL)
-GO
-INSERT avaliacao_aluno (cd_avaliacao, cd_aluno, ds_avaliacao_aluno, dt_inicio, dt_fim) VALUES (2, 6, '2a Avaliação Banco de dados', CAST('2022-10-24T16:31:27.027' AS DateTime), CAST('2022-10-24T16:00:35.893' AS DateTime))
-GO
-INSERT avaliacao_aluno (cd_avaliacao, cd_aluno, ds_avaliacao_aluno, dt_inicio, dt_fim) VALUES (2, 8, '2a Avaliação Banco de dados', CAST('2022-10-24T16:31:26.327' AS DateTime), CAST('2022-10-24T16:00:35.893' AS DateTime))
-GO
-INSERT avaliacao_aluno (cd_avaliacao, cd_aluno, ds_avaliacao_aluno, dt_inicio, dt_fim) VALUES (2, 9, '2a Avaliação Banco de dados', CAST('2022-10-24T16:31:27.737' AS DateTime), NULL)
-GO
+INSERT INTO apolice (celular, cliente, funcionario, valor, inicio, fim) VALUES
+(1, 1, 1, 499.99, '01/01/2023', '01/01/2024'),
+(2, 2, 2, 299.99, '05/02/2023', '05/02/2024'),
+(3, 3, 3, 399.99, '10/03/2023', '10/03/2024'),
+(4, 4, 4, 249.99, '15/04/2023', '15/04/2024'),
+(5, 5, 5, 199.99, '20/05/2023', '20/05/2024'),
+(6, 6, 6, 349.99, '25/06/2023', '25/06/2024'),
+(7, 7, 7, 299.99, '30/07/2023', '30/07/2024'),
+(8, 8, 8, 399.99, '05/08/2023', '05/08/2024'),
+(9, 9, 9, 499.99, '10/09/2023', '10/09/2024'),
+(10, 10, 10, 199.99, '15/10/2023', '15/10/2024'),
+(11, 11, 11, 249.99, '20/11/2023', '20/11/2024'),
+(12, 12, 12, 299.99, '25/12/2023', '25/12/2024'),
+(13, 13, 13, 199.99, '01/01/2024', '01/01/2025'),
+(14, 14, 14, 349.99, '05/02/2024', '05/02/2025'),
+(15, 15, 15, 249.99, '10/03/2024', '10/03/2025'),
+(16, 16, 16, 199.99, '15/04/2024', '15/04/2025'),
+(17, 17, 17, 299.99, '20/05/2024', '20/05/2025'),
+(18, 18, 18, 399.99, '25/06/2024', '25/06/2025'),
+(19, 19, 19, 499.99, '30/07/2024', '30/07/2025'),
+(20, 20, 20, 199.99, '05/08/2024', '05/08/2025');
+
+
+
+INSERT INTO funcionario (id, nome, sobrenome, cpf, contato, salario, funcao) VALUES
+(1, 'João', 'Silva', '123.456.789-01', '(11) 98765-4321', 5000.00, 'Analista de Sinistros'),
+(2, 'Maria', 'Santos', '234.567.890-12', '(21) 91234-5678', 5500.00, 'Gerente de Vendas'),
+(3, 'Pedro', 'Oliveira', '345.678.901-23', '(31) 92345-6789', 6000.00, 'Especialista em Atendimento'),
+(4, 'Ana', 'Costa', '456.789.012-34', '(41) 93456-7890', 4800.00, 'Analista de Marketing'),
+(5, 'Carlos', 'Ferreira', '567.890.123-45', '(51) 94567-8901', 5200.00, 'Supervisor de Operações'),
+(6, 'Mariana', 'Pereira', '678.901.234-56', '(61) 95678-9012', 4700.00, 'Coordenador de Vendas'),
+(7, 'Ricardo', 'Almeida', '789.012.345-67', '(71) 96789-0123', 5800.00, 'Analista de Suporte'),
+(8, 'Juliana', 'Rodrigues', '890.123.456-78', '(81) 97890-1234', 5300.00, 'Gerente de Relacionamento'),
+(9, 'Fernanda', 'Martins', '901.234.567-89', '(91) 98901-2345', 4900.00, 'Especialista em Sinistros'),
+(10, 'Paulo', 'Lima', '012.345.678-90', '(11) 90000-0001', 6200.00, 'Diretor Comercial'),
+(11, 'Renata', 'Gomes', '123.456.789-00', '(21) 91111-1111', 5400.00, 'Analista de Qualidade'),
+(12, 'Lucas', 'Barbosa', '234.567.890-11', '(31) 92222-2222', 5100.00, 'Consultor de Vendas'),
+(13, 'Aline', 'Ribeiro', '345.678.901-22', '(41) 93333-3333', 4700.00, 'Coordenador de Atendimento'),
+(14, 'Bruno', 'Carvalho', '456.789.012-33', '(51) 94444-4444', 5900.00, 'Analista de Operações'),
+(15, 'Patrícia', 'Silveira', '567.890.123-44', '(61) 95555-5555', 5600.00, 'Gerente de Marketing'),
+(16, 'Sérgio', 'Azevedo', '678.901.234-55', '(71) 96666-6666', 4900.00, 'Especialista em Vendas'),
+(17, 'Amanda', 'Melo', '789.012.345-66', '(81) 97777-7777', 5700.00, 'Supervisor de Atendimento'),
+(18, 'Gustavo', 'Souza', '890.123.456-77', '(91) 98888-8888', 5000.00, 'Analista de Recursos Humanos'),
+(19, 'Larissa', 'Teixeira', '901.234.567-88', '(11) 90009-0009', 4800.00, 'Assistente Administrativo'),
+(20, 'Eduardo', 'Rocha', '012.345.678-99', '(21) 91111-9999', 6000.00, 'Diretor Financeiro');
+
+
+INSERT INTO cliente (id, nome, sobrenome, cpf, contato) VALUES
+(1, 'Ana', 'Silva', '123.456.789-00', '(11) 91234-5678'),
+(2, 'Bruno', 'Souza', '234.567.890-11', '(21) 98765-4321'),
+(3, 'Carlos', 'Oliveira', '345.678.901-22', '(31) 99876-5432'),
+(4, 'Daniela', 'Pereira', '456.789.012-33', '(41) 98765-6543'),
+(5, 'Eduardo', 'Costa', '567.890.123-44', '(51) 91234-8765'),
+(6, 'Fernanda', 'Gomes', '678.901.234-55', '(61) 93456-7890'),
+(7, 'Gustavo', 'Alves', '789.012.345-66', '(71) 94567-8901'),
+(8, 'Helena', 'Ribeiro', '890.123.456-77', '(81) 95678-9012'),
+(9, 'Igor', 'Fernandes', '901.234.567-88', '(91) 96789-0123'),
+(10, 'Juliana', 'Melo', '012.345.678-99', '(31) 97890-1234'),
+(11, 'Karen', 'Lima', '123.456.789-01', '(41) 98901-2345'),
+(12, 'Leonardo', 'Carvalho', '234.567.890-12', '(51) 99012-3456'),
+(13, 'Mariana', 'Santos', '345.678.901-23', '(61) 90123-4567'),
+(14, 'Nicolas', 'Martins', '456.789.012-34', '(71) 91234-5678'),
+(15, 'Olivia', 'Rocha', '567.890.123-45', '(81) 92345-6789'),
+(16, 'Paulo', 'Teixeira', '678.901.234-56', '(91) 93456-7890'),
+(17, 'Quintino', 'Barros', '789.012.345-67', '(11) 94567-8901'),
+(18, 'Rafaela', 'Araújo', '890.123.456-78', '(21) 95678-9012'),
+(19, 'Samuel', 'Correia', '901.234.567-89', '(31) 96789-0123'),
+(20, 'Tatiana', 'Farias', '012.345.678-90', '(41) 97890-1234'),
+(21, 'Ursula', 'Borges', '123.456.789-11', '(51) 98901-2345'),
+(22, 'Vinicius', 'Moura', '234.567.890-22', '(61) 99012-3456'),
+(23, 'Wesley', 'Nunes', '345.678.901-33', '(71) 90123-4567'),
+(24, 'Xavier', 'Almeida', '456.789.012-44', '(81) 91234-5678'),
+(25, 'Yasmin', 'Castro', '567.890.123-55', '(91) 92345-6789'),
+(26, 'Zeca', 'Batista', '678.901.234-66', '(11) 93456-7890');
+
+
+
+INSERT INTO celular (id, modelo, ano, marca, cliente) VALUES
+(1, 'iPhone 13', 2021, 'Apple', 1),
+(2, 'Galaxy S21', 2021, 'Samsung', 2),
+(3, 'Moto G100', 2021, 'Motorola', 3),
+(4, 'Xperia 5 II', 2020, 'Sony', 4),
+(5, 'Redmi Note 10', 2021, 'Xiaomi', 5),
+(6, 'OnePlus 9', 2021, 'OnePlus', 6),
+(7, 'P40 Pro', 2020, 'Huawei', 7),
+(8, 'Pixel 5', 2020, 'Google', 8),
+(9, 'Nokia 8.3', 2020, 'Nokia', 9),
+(10, 'Galaxy Note 20', 2020, 'Samsung', 10),
+(11, 'iPhone 12', 2020, 'Apple', 11),
+(12, 'Moto G9', 2020, 'Motorola', 12),
+(13, 'Xperia 1 II', 2020, 'Sony', 13),
+(14, 'Redmi Note 9', 2020, 'Xiaomi', 14),
+(15, 'OnePlus 8T', 2020, 'OnePlus', 15),
+(16, 'P30 Pro', 2019, 'Huawei', 16),
+(17, 'Pixel 4a', 2020, 'Google', 17),
+(18, 'Nokia 7.2', 2019, 'Nokia', 18),
+(19, 'Galaxy S20', 2020, 'Samsung', 19),
+(20, 'iPhone 11', 2019, 'Apple', 20),
+(21, 'Moto G8', 2019, 'Motorola', 1),
+(22, 'Xperia 10 II', 2020, 'Sony', 2),
+(23, 'Redmi Note 8', 2019, 'Xiaomi', 3),
+(24, 'OnePlus 7T', 2019, 'OnePlus', 4),
+(25, 'P20 Pro', 2018, 'Huawei', 5),
+(26, 'Pixel 3a', 2019, 'Google', 6),
+(27, 'Nokia 6.2', 2019, 'Nokia', 7);
+
+
+INSERT INTO fornecedor (id, nome, cnpj, descricao) VALUES
+(1, 'AlphaTech Ltda', '12.345.678/0001-01', 'Fornecedor de soluções tecnológicas e eletrônicos'),
+(2, 'BetaDistribuidora', '23.456.789/0001-02', 'Distribuidor de materiais de escritório e papelaria'),
+(3, 'GamaEquipamentos', '34.567.890/0001-03', 'Fornecedor de equipamentos industriais e ferramentas'),
+(4, 'DeltaConstruções', '45.678.901/0001-04', 'Fornecedor de materiais de construção e ferragens'),
+(5, 'EpsilonLimpeza', '56.789.012/0001-05', 'Fornecedor de produtos de limpeza e higiene'),
+(6, 'ZetaAlimentos', '67.890.123/0001-06', 'Distribuidor de produtos alimentícios e bebidas'),
+(7, 'EtaMóveis', '78.901.234/0001-07', 'Fornecedor de móveis e decoração para residências e escritórios'),
+(8, 'ThetaRoupas', '89.012.345/0001-08', 'Vendedor de roupas e acessórios de moda'),
+(9, 'IotaFerramentas', '90.123.456/0001-09', 'Fornecedor de ferramentas e equipamentos para construção'),
+(10, 'KappaMedicamentos', '01.234.567/0001-10', 'Distribuidor de medicamentos e produtos hospitalares'),
+(11, 'LambdaBrinquedos', '12.345.678/0001-11', 'Fornecedor de brinquedos e jogos educativos'),
+(12, 'MuEsportes', '23.456.789/0001-12', 'Vendedor de produtos esportivos e equipamentos de ginástica'),
+(13, 'NuEletrônicos', '34.567.890/0001-13', 'Fornecedor de produtos eletrônicos e eletrodomésticos'),
+(14, 'XiPapelaria', '45.678.901/0001-14', 'Distribuidor de materiais escolares e de escritório'),
+(15, 'OmicronJardinagem', '56.789.012/0001-15', 'Fornecedor de produtos e equipamentos para jardinagem'),
+(16, 'PiBeleza', '67.890.123/0001-16', 'Vendedor de produtos de beleza e higiene pessoal'),
+(17, 'RhoBebidas', '78.901.234/0001-17', 'Distribuidor de bebidas e alimentos gourmet'),
+(18, 'SigmaSegurança', '89.012.345/0001-18', 'Fornecedor de equipamentos de segurança e proteção'),
+(19, 'TauEletrodomésticos', '90.123.456/0001-19', 'Vendedor de eletrodomésticos e produtos eletrônicos'),
+(20, 'UpsilonFestas', '01.234.567/0001-20', 'Fornecedor de artigos para festas e eventos'),
+(21, 'PhiAutomotivos', '12.345.678/0001-21', 'Distribuidor de produtos automotivos e acessórios'),
+(22, 'ChiPapel', '23.456.789/0001-22', 'Fornecedor de produtos de papelaria e escritório'),
+(23, 'PsiPet', '34.567.890/0001-23', 'Vendedor de produtos para animais de estimação'),
+(24, 'OmegaIluminação', '45.678.901/0001-24', 'Fornecedor de produtos de iluminação e lâmpadas');
+
+
+
+
+INSERT INTO sinistro (id, data, cliente, celular, local, horario, fornecedor, descricao) VALUES
+(1, '10/01/2023', 1, 1, 'São Paulo', '10:30', 1, 'Queda acidental do celular'),
+(2, '20/02/2023', 2, 2, 'Rio de Janeiro', '14:45', 2, 'Roubo do celular em transporte público'),
+(3, '15/03/2023', 3, 3, 'Belo Horizonte', '09:00', 3, 'Dano por água devido a inundação'),
+(4, '25/04/2023', 4, 4, 'Curitiba', '16:15', 4, 'Tela quebrada durante uma caminhada'),
+(5, '30/05/2023', 5, 5, 'Porto Alegre', '11:50', 5, 'Problema técnico - celular não liga'),
+(6, '10/06/2023', 6, 6, 'Brasília', '13:25', 6, 'Furto do celular em shopping center'),
+(7, '13/07/2023', 7, 7, 'Recife', '18:30', 7, 'Dano por queda de escada'),
+(8, '20/07/2023', 8, 8, 'Salvador', '08:20', 8, 'Celular perdido durante viagem'),
+(9, '25/09/2023', 9, 9, 'Fortaleza', '19:10', 9, 'Problema de bateria - não carrega'),
+(10, '28/10/2023', 10, 10, 'Manaus', '07:45', 10, 'Tela com defeito - falha de fábrica'),
+(11, '10/11/2023', 11, 11, 'Belém', '12:55', 11, 'Celular molhado durante chuva'),
+(12, '15/12/2023', 12, 12, 'Goiânia', '17:40', 12, 'Roubo à mão armada'),
+(13, '08/03/2023', 13, 13, 'São Luís', '15:00', 13, 'Falha no sistema operacional'),
+(14, '10/02/2023', 14, 14, 'Maceió', '13:15', 14, 'Celular danificado por criança'),
+(15, '12/03/2023', 15, 15, 'Natal', '10:45', 15, 'Queda de bicicleta com celular no bolso'),
+(16, '19/03/2023', 16, 16, 'Aracaju', '16:30', 16, 'Celular esquecido em táxi'),
+(17, '26/05/2023', 17, 17, 'Campo Grande', '09:20', 17, 'Quebra da tela durante jogo'),
+(18, '30/06/2023', 18, 18, 'Cuiabá', '18:50', 18, 'Dano por sobrecarga elétrica'),
+(19, '05/07/2023', 19, 19, 'Florianópolis', '14:35', 19, 'Furto em restaurante'),
+(20, '10/08/2023', 20, 20, 'Vitória', '11:10', 20, 'Celular caído na piscina'),
+(21, '15/09/2023', 1, 1, 'João Pessoa', '12:45', 1, 'Problema com o alto-falante'),
+(22, '21/10/2023', 2, 2, 'Teresina', '15:25', 2, 'Dano causado por animal de estimação'),
+(23, '25/11/2023', 3, 3, 'Macapá', '10:00', 3, 'Perda durante evento público'),
+(24, '12/12/2023', 4, 4, 'Rio Branco', '17:00', 4, 'Problema na câmera do celular');
+
+INSERT INTO pagamento (id, cliente, celular, valor, tipoPagamento, data, descricao) VALUES
+(1, 1, 1, 499.99, 1, '2023-01-10', 'Pagamento pelo reparo do celular'),
+(2, 2, 2, 299.99, 2, '2023-02-15', 'Pagamento pelo seguro do celular'),
+(3, 3, 3, 199.99, 3, '2023-03-20', 'Pagamento pela troca de tela do celular'),
+(4, 4, 4, 599.99, 4, '2023-04-25', 'Pagamento pela compra de novo celular'),
+(5, 5, 5, 99.99, 5, '2023-05-30', 'Pagamento pela limpeza do celular'),
+(6, 6, 6, 49.99, 6, '2023-06-10', 'Pagamento pela avaliação técnica'),
+(7, 7, 7, 399.99, 1, '2023-07-15', 'Pagamento pelo reparo de software'),
+(8, 8, 8, 149.99, 2, '2023-08-20', 'Pagamento pelo seguro de viagem do celular'),
+(9, 9, 9, 249.99, 3, '2023-09-25', 'Pagamento pela troca de bateria'),
+(10, 10, 10, 799.99, 4, '2023-10-30', 'Pagamento pela compra de acessório'),
+(11, 11, 11, 99.99, 5, '2023-11-10', 'Pagamento pelo reparo do alto-falante'),
+(12, 12, 12, 349.99, 6, '2023-12-15', 'Pagamento pelo seguro contra roubo'),
+(13, 13, 13, 199.99, 1, '2024-01-05', 'Pagamento pela atualização de software'),
+(14, 14, 14, 149.99, 2, '2024-02-10', 'Pagamento pela compra de capa protetora'),
+(15, 15, 15, 299.99, 3, '2024-03-15', 'Pagamento pela troca de câmera'),
+(16, 16, 16, 49.99, 4, '2024-04-20', 'Pagamento pela limpeza interna do celular'),
+(17, 17, 17, 99.99, 5, '2024-05-25', 'Pagamento pela avaliação de danos'),
+(18, 18, 18, 249.99, 6, '2024-06-30', 'Pagamento pelo conserto de botão'),
+(19, 19, 19, 399.99, 1, '2024-07-05', 'Pagamento pela troca de tela'),
+(20, 20, 20, 599.99, 2, '2024-08-10', 'Pagamento pela compra de celular novo');
+
