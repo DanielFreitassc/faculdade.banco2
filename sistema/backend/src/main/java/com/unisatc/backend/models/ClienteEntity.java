@@ -1,5 +1,6 @@
 package com.unisatc.backend.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,6 +25,7 @@ public class ClienteEntity {
     private Integer id;
     private String nome;
     private String sobrenome;
+    @Column(length = 14)
     private String cpf;
     private String contato;
 

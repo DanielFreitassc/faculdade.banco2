@@ -1,6 +1,9 @@
 package com.unisatc.backend.models;
 
-import java.time.Instant;
+import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,8 +31,10 @@ public class ApoliceEntity {
     @ManyToOne
     @JoinColumn(name = "cliente")
     private ClienteEntity cliente;
-    private Instant inicio;
-    private Instant fim;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate inicio;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate fim;
     private Double valor;
     @ManyToOne
     @JoinColumn(name = "celular")

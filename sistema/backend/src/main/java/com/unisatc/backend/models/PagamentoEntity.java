@@ -1,6 +1,9 @@
 package com.unisatc.backend.models;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,6 +39,7 @@ public class PagamentoEntity {
     @ManyToOne
     @JoinColumn(name = "tipo_pagamento")
     private TipoPagamentoEntity tipo_pagamento;
-    private LocalDateTime data;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate data;
     private String descricao;
 }
