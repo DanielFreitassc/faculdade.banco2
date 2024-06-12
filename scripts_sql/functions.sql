@@ -1,16 +1,20 @@
-DROP FUNCTION IF EXISTS fn_count_apolices
-GO
-
-CREATE FUNCTION fn_count_apolices (@cod_cliente int)
-RETURNS int
-AS
+CREATE OR REPLACE FUNCTION fn_total_pagamentos_cliente(pr_cliente int)
+RETURNS numeric(10, 2)
+LANGUAGE plpgsql
+AS $function$
+DECLARE
+	total numeric(10, 2);
 BEGIN
-	DECLARE @resultado int
+	SELECT
+		sum(pagamento.valor)
+	INTO total
+	FROM pagamento
+	WHERE pagamento.cliente = pr_cliente;
 
-	SELECT @resultado = COUNT(cod_apolice)
-	FROM apolice
-	WHERE cod_cliente = @cod_cliente
+	IF (total IS NULL) THEN
+		total := 0;
+	END IF;
 
-	RETURN @resultado
-END
-GO
+	RETURN total;
+END;
+$function$;
