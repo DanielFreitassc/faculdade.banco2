@@ -1,14 +1,40 @@
-DROP TRIGGER IF EXISTS td_apolice
-go
-
-CREATE TRIGGER td_apolice on apolice AFTER DELETE as
+CREATE OR REPLACE FUNCTION tr_calcula_total_tipo_pagamento()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+AS $function$
+declare
+	id int;
 BEGIN
-	IF ROWCOUNT_BIG() = 0
-		RETURN
+	SELECT
+		tab.id
+	INTO id
+	FROM total_tipo_pagamento tab
+	WHERE tab.tipo_pagamento = NEW.tipo_pagamento;
 
-	INSERT INTO apolice_log
-	SELECT *, GETDATE(), SUSER_NAME()
-	FROM deleted
+	IF (id IS NULL) THEN
+		SELECT
+			COALESCE(max(tab.id) + 1, 1)
+		INTO id
+		FROM total_tipo_pagamento tab;
+	
+		INSERT INTO total_tipo_pagamento (
+			id,
+			tipo_pagamento,
+			valor
+		) VALUES (
+			id,
+			NEW.tipo_pagamento,
+			NEW.valor
+		);
+	ELSE
+		UPDATE total_tipo_pagamento
+		SET valor = valor + NEW.valor
+		WHERE tipo_pagamento = NEW.tipo_pagamento;
+	END IF;
 
-END
-GO
+	RETURN NEW;
+END;
+$function$;
+
+CREATE TRIGGER tr_insere_pagamento AFTER INSERT ON pagamento
+FOR EACH ROW EXECUTE FUNCTION tr_calcula_total_tipo_pagamento();
