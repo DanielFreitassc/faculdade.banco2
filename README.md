@@ -16,7 +16,7 @@ Arquivo fonte: [Modelo Fisico](https://dbdiagram.io/d/6660f7fe8f6e135d4a671308).
 ![Nodelo Fisico](image.png)
   
 ### Dicionário de Dados
-As informações sobre as tabelas e índices foram documentados na planilha [template1.xlsx](dicionario_dados/dicionarioDeDados.xlsx).
+As informações sobre as tabelas e índices foram documentados na planilha [dicionarioDeDados.xlsx](dicionario_dados/dicionarioDeDados.xlsx).
 
 ### Scripts SQL
 Para este projeto foi utilizado o banco de dados [Azure SQL](https://azure.microsoft.com/pt-br/products/azure-sql/database) <br>
