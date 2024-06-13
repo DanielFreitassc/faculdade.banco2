@@ -124,3 +124,4 @@ docker run -dti -p 8080:8080 api
   - **Exceções**:
       - **400 Bad Request**: Se o payload não estiver conforme esperado ou se houver erros de validação nos campos.
 ---
+## .
