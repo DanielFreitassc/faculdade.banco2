@@ -4,7 +4,7 @@ Id serial PRIMARY KEY,
 
 Contato character varying(255),
 
-Cpf character varying(14),
+Cpf character varying(11),
 
 Nome character varying(255),
 
@@ -34,7 +34,7 @@ Salario double precision,
 
 Contato character varying(14),
 
-Cpf character varying(14),
+Cpf character varying(11),
 
 Funcao character varying(255),
 
@@ -49,7 +49,7 @@ Create table tipo_pagamento (
 
 Id serial primary key,
 
-Descricao varchar(255)
+Descricao varying(255)
 
 );
 
@@ -104,10 +104,4 @@ Inicio date,
 
 Fim date
 
-);
-
-create table total_tipo_pagamento (
-	id int primary key,
-	tipo_pagamento int not null references tipo_pagamento,
-	valor numeric (10,2) not null
 );
