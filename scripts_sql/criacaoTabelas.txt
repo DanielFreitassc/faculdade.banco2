@@ -1,68 +1,113 @@
-create table cliente (
-	id integer not null primary key,
-	contato character varying(255),
-	cpf character varying(14),
-	nome character varying(255),
-	sobrenome character varying(255)
-)
+Create table cliente (
 
-create table fornecedor (
-	id integer not null primary key,
-	cnpj character varying(14),
-	descricao character varying(255),
-	nome character varying(255)
-)
+Id serial PRIMARY KEY,
 
-create table funcionario (
-	id integer not null primary key,
-	salario double precision,
-	contato character varying(14),
-	cpf character varying(14),
-	funcao character varying(255),
-	nome character varying(255),
-	sobrenome character varying(255)
-)
+Contato character varying(255),
 
-create table pagamento (
-	id integer not null primary key,
-	data timestamp without time zone not null,
-	celular integer,
-	cliente integer,
-	tipo_pagamento integer,
-	descricao character varying(255)
-)
+Cpf character varying(14),
 
-create table celular (
-	id integer not null primary key,
-	cliente integer references cliente,
-	ano integer not null,
-	marca character varying(255),
-	modelo character varying(255)
-)
+Nome character varying(255),
 
-create table apolice (
-	id integer not null primary key,
-	celular integer references celular,
-	cliente integer references cliente,
-	funcionario integer references funcionario,
-	valor double precision,
-	inicio date,
-	fim date	
-)
+Sobrenome character varying(255)
 
-create table sinistro (
-	id integer not null primary key,
-	celular integer references celular,
-	cliente integer references cliente,
-	data date,
-	fornecedor integer references fornecedor,
-	horario time without time zone,
-	descricao character varying (255),
-	local character varying (255)
-)
+);
+
+
+Create table fornecedor (
+
+Id serial primary key,
+
+Cnpj character varying(14),
+
+Descricao character varying(255),
+
+Nome character varying(255)
+
+);
+
+
+Create table funcionario (
+
+Id serial primary key,
+
+Salario double precision,
+
+Contato character varying(14),
+
+Cpf character varying(14),
+
+Funcao character varying(255),
+
+Nome character varying(255),
+
+Sobrenome character varying(255)
+
+);
+
+
+Create table tipo_pagamento (
+
+Id serial primary key,
+
+Descricao varchar(255)
+
+);
+
+
+Create table pagamento (
+
+Id serial primary key,
+
+Data timestamp without time zone not null,
+
+Celular integer,
+
+Cliente integer,
+
+Pagamento numeric(10, 2),
+
+Tipo_pagamento integer,
+
+Descricao character varying(255)
+
+);
+
+
+Create table celular (
+
+Id serial primary key,
+
+Cliente integer references cliente,
+
+Ano integer not null,
+
+Marca character varying(255),
+
+Modelo character varying(255)
+
+);
+
+
+Create table apolice (
+
+Id serial primary key,
+
+Celular integer references celular,
+
+Cliente integer references cliente,
+
+Funcionario integer references funcionario,
+
+Valor double precision,
+
+Inicio date,
+
+Fim date
+
+);
 
 create table total_tipo_pagamento (
 	id int primary key,
 	tipo_pagamento int not null references tipo_pagamento,
 	valor numeric (10,2) not null
-)
+);
