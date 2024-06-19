@@ -1,7 +1,18 @@
-1- Quantidade de apólices emitidas para sinistros cadastrados em maio: Considerando o histórico de sinistros registrados no mês de maio, gostaria de saber quantas apólices foram efetivamente emitidas para cobrir esses sinistros? Essa análise pode nos ajudar a entender a eficácia do sistema de seguro em relação aos eventos ocorridos.
+1- Quantidade de apólices emitidas para sinistros cadastrados em maio: Considerando o histórico de sinistros registrados no mês de maio, 
+gostaria de saber quantas apólices foram efetivamente emitidas para cobrir esses sinistros? 
+Essa análise pode nos ajudar a entender a eficácia do sistema de seguro em relação aos eventos ocorridos.
 
-2 - Tipos de pagamentos relacionados a apólices de seguro em um mês específico: Para um mês X (por exemplo, junho), quais são os diferentes tipos de pagamentos associados a apólices de seguro de celulares?
 
-3 - Modelos de celulares com maior margem de prejuizo: Vamos analisar os dados para identificar quais modelos específicos de celulares geram maior prejuizo para a empresa. Isso envolve considerar os custos de aquisição, os prêmios de seguro associados a esses modelos e as taxas de sinistros.
+2 - Tipos de pagamentos relacionados a apólices de seguro em um mês específico: Para um mês X (por exemplo, junho), 
+quais são os diferentes tipos de pagamentos associados a apólices de seguro de celulares?
 
-4 - Desempenho dos funcionários em relação a apólices de seguro para um mesmo celular: Quais funcionários tiveram mais apólices cadastradas para um mesmo celular específico durante o mês X (do fornecedor Y)? Essa análise pode ajudar a otimizar a distribuição de tarefas e avaliar o desempenho da equipe.
+
+3 - Modelos de celulares com maior margem de prejuizo: Vamos analisar os dados para identificar 
+quais modelos específicos de celulares geram maior prejuizo para a empresa. 
+Isso envolve considerar os custos de aquisição, os prêmios de seguro associados a esses modelos e as taxas de sinistros.
+
+
+4 - Desempenho dos funcionários em relação a apólices de seguro para um mesmo celular: Quais funcionários tiveram mais apólices 
+cadastradas para um mesmo celular específico durante o mês X (do fornecedor Y)? Essa análise pode ajudar a otimizar a 
+distribuição de tarefas e avaliar o desempenho da equipe.
+
