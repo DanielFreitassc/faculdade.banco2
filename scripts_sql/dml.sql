@@ -1,56 +1,11 @@
-
-INSERT INTO apolice (celular, cliente, funcionario, valor, inicio, fim) VALUES
-(1, 1, 1, 499.99, '01-01-2023', '01-01-2024'),
-(2, 2, 2, 299.99, '05-02-2023', '05-02-2024'),
-(3, 3, 3, 399.99, '10-03-2023', '10-03-2024'),
-(4, 4, 4, 249.99, '15-04-2023', '15-04-2024'),
-(5, 5, 5, 199.99, '20-05-2023', '20-05-2024'),
-(6, 6, 6, 349.99, '25-06-2023', '20-06-2024'),
-(7, 7, 7, 299.99, '30-07-2023', '30-07-2024'),
-(8, 8, 8, 399.99, '05-08-2023', '05-08-2024'),
-(9, 9, 9, 499.99, '10-09-2023', '10-09-2024'),
-(10, 10, 10, 199.99, '15-10-2023', '15-10-2024'),
-(11, 11, 11, 249.99, '20-11-2023', '20-11-2024'),
-(12, 12, 12, 299.99, '25-12-2023', '25-12-2024'),
-(13, 13, 13, 199.99, '01-01-2024', '01-01-2025'),
-(14, 14, 14, 349.99, '05-02-2024', '05-02-2025'),
-(15, 15, 15, 249.99, '10-03-2024', '10-03-2025'),
-(16, 16, 16, 199.99, '15-04-2024', '15-04-2025'),
-(17, 17, 17, 299.99, '20-05-2024', '20-05-2025'),
-(18, 18, 18, 399.99, '25-06-2024', '25-06-2025'),
-(19, 19, 19, 499.99, '30-07-2024', '30-07-2025'),
-(20, 20, 20, 199.99, '05-08-2024', '05-08-2025');
-
-
-
-INSERT INTO funcionario (nome, sobrenome, cpf, contato, salario, funcao) VALUES
-( 'Maria', 'Santos', '23456789012', '(21) 91234-5678', 5500.00, 'Gerente de Vendas'),
-( 'João', 'Silva', '12345678901', '(11) 98765-4321', 5000.00, 'Analista de Sinistros'),
-( 'Pedro', 'Oliveira', '34567890123', '(31) 92345-6789', 6000.00, 'Especialista em Atendimento'),
-( 'Carlos', 'Ferreira', '56789012345', '(51) 94567-8901', 5200.00, 'Supervisor de Operações'),
-( 'Ana', 'Costa', '45678901234', '(41) 93456-7890', 4800.00, 'Analista de Marketing'),
-( 'Mariana', 'Pereira', '67890123456', '(61) 95678-9012', 4700.00, 'Coordenador de Vendas'),
-( 'Ricardo', 'Almeida', '78901234567', '(71) 96789-0123', 5800.00, 'Analista de Suporte'),
-( 'Juliana', 'Rodrigues', '89012345678', '(81) 97890-1234', 5300.00, 'Gerente de Relacionamento'),
-( 'Fernanda', 'Martins', '90123456789', '(91) 98901-2345', 4900.00, 'Especialista em Sinistros'),
-( 'Paulo', 'Lima', '01234567890', '(11) 90000-0001', 6200.00, 'Diretor Comercial'),
-( 'Renata', 'Gomes', '12345678900', '(21) 91111-1111', 5400.00, 'Analista de Qualidade'),
-( 'Lucas', 'Barbosa', '23456789011', '(31) 92222-2222', 5100.00, 'Consultor de Vendas'),
-( 'Aline', 'Ribeiro', '34567890122', '(41) 93333-3333', 4700.00, 'Coordenador de Atendimento'),
-( 'Bruno', 'Carvalho', '45678901233', '(51) 94444-4444', 5900.00, 'Analista de Operações'),
-( 'Patrícia', 'Silveira', '56789012344', '(61) 95555-5555', 5600.00, 'Gerente de Marketing'),
-( 'Sérgio', 'Azevedo', '67890123455', '(71) 96666-6666', 4900.00, 'Especialista em Vendas'),
-( 'Amanda', 'Melo', '78901234566', '(81) 97777-7777', 5700.00, 'Supervisor de Atendimento'),
-( 'Gustavo', 'Souza', '89012345677', '(91) 98888-8888', 5000.00, 'Analista de Recursos Humanos'),
-( 'Larissa', 'Teixeira', '90123456788', '(11) 90009-0009', 4800.00, 'Assistente Administrativo'),
-( 'Eduardo', 'Rocha', '01234567899', '(21) 91111-9999', 6000.00, 'Diretor Fnanceiro');
-
+-- Definir o estilo de data para 'DMY' (Dia, Mês, Ano)
+SET datestyle = 'ISO, DMY';
 
 INSERT INTO cliente (nome, sobrenome, cpf, contato) VALUES
 ('Ana', 'Silva', '12345678900', '(11) 91234-5678'),
 ('Bruno', 'Souza', '23456789011', '(21) 98765-4321'),
 ('Carlos', 'Oliveira', '34567890122', '(31) 99876-5432'),
-('Daniela', 'Pereira', '456.789.01233', '(41) 98765-6543'),
+('Daniela', 'Pereira', '45678901233', '(41) 98765-6543'),
 ('Eduardo', 'Costa', '56789012344', '(51) 91234-8765'),
 ('Fernanda', 'Gomes', '67890123455', '(61) 93456-7890'),
 ('Gustavo', 'Alves', '78901234566', '(71) 94567-8901'),
@@ -73,8 +28,6 @@ INSERT INTO cliente (nome, sobrenome, cpf, contato) VALUES
 ( 'Xavier', 'Almeida', '45678901244', '(81) 91234-5678'),
 ( 'Yasmin', 'Castro', '56789012355', '(91) 92345-6789'),
 ( 'Zeca', 'Batista', '67890123466', '(11) 93456-7890');
-
-
 
 INSERT INTO celular (modelo, ano, marca, cliente) VALUES
 ('iPhone 13', 2021, 'Apple', 1),
@@ -100,11 +53,32 @@ INSERT INTO celular (modelo, ano, marca, cliente) VALUES
 ('Moto G8', 2019, 'Motorola', 1),
 ('Xperia 10 II', 2020, 'Sony', 2),
 ('Redmi Note 8', 2019, 'Xiaomi', 3),
-('OnePlus 7T', 2019, 'OnePlus'), 
+('OnePlus 7T', 2019, 'OnePlus',2), 
 ('P20 Pro', 2018, 'Huawei', 5),
 ('Pixel 3a', 2019, 'Google', 6),
 ('Nokia 6.2', 2019, 'Nokia', 7);
 
+INSERT INTO funcionario (nome, sobrenome, cpf, contato, salario, funcao) VALUES
+( 'Maria', 'Santos', '23456789012', '(21)91234-5678', 5500.00, 'Gerente de Vendas'),
+( 'João', 'Silva', '12345678901', '(11)98765-4321', 5000.00, 'Analista de Sinistros'),
+( 'Pedro', 'Oliveira', '34567890123', '(31)92345-6789', 6000.00, 'Especialista em Atendimento'),
+( 'Carlos', 'Ferreira', '56789012345', '(51)94567-8901', 5200.00, 'Supervisor de Operações'),
+( 'Ana', 'Costa', '45678901234', '(41)93456-7890', 4800.00, 'Analista de Marketing'),
+( 'Mariana', 'Pereira', '67890123456', '(61)95678-9012', 4700.00, 'Coordenador de Vendas'),
+( 'Ricardo', 'Almeida', '78901234567', '(71)96789-0123', 5800.00, 'Analista de Suporte'),
+( 'Juliana', 'Rodrigues', '89012345678', '(81)97890-1234', 5300.00, 'Gerente de Relacionamento'),
+( 'Fernanda', 'Martins', '90123456789', '(91)98901-2345', 4900.00, 'Especialista em Sinistros'),
+( 'Paulo', 'Lima', '01234567890', '(11)90000-0001', 6200.00, 'Diretor Comercial'),
+( 'Renata', 'Gomes', '12345678900', '(21)91111-1111', 5400.00, 'Analista de Qualidade'),
+( 'Lucas', 'Barbosa', '23456789011', '(31)92222-2222', 5100.00, 'Consultor de Vendas'),
+( 'Aline', 'Ribeiro', '34567890122', '(41)93333-3333', 4700.00, 'Coordenador de Atendimento'),
+( 'Bruno', 'Carvalho', '45678901233', '(51)94444-4444', 5900.00, 'Analista de Operações'),
+( 'Patrícia', 'Silveira', '56789012344', '(61)95555-5555', 5600.00, 'Gerente de Marketing'),
+( 'Sérgio', 'Azevedo', '67890123455', '(71)96666-6666', 4900.00, 'Especialista em Vendas'),
+( 'Amanda', 'Melo', '78901234566', '(81)97777-7777', 5700.00, 'Supervisor de Atendimento'),
+( 'Gustavo', 'Souza', '89012345677', '(91)98888-8888', 5000.00, 'Analista de Recursos Humanos'),
+( 'Larissa', 'Teixeira', '90123456788', '(11)90009-0009', 4800.00, 'Assistente Administrativo'),
+( 'Eduardo', 'Rocha', '01234567899', '(21)91111-9999', 6000.00, 'Diretor Fnanceiro');
 
 INSERT INTO fornecedor (nome, cnpj, descricao) VALUES
 ('AlphaTech Ltda', '12345678000101', 'Fornecedor de soluções tecnológicas e eletrônicos'),
@@ -132,36 +106,77 @@ INSERT INTO fornecedor (nome, cnpj, descricao) VALUES
 ('PsiPet', '34567890000123', 'Vendedor de produtos para animais de estimação'),
 ('OmegaIluminação', '45678901000124', 'Fornecedor de produtos de iluminação e lâmpadas');
 
+INSERT INTO apolice (celular, cliente, funcionario, valor, inicio, fim) VALUES
+(1, 1, 1, 499.99, '01/01/2023', '01/01/2024'),
+(2, 2, 2, 299.99, '05/02/2023', '05/02/2024'),
+(3, 3, 3, 399.99, '10/03/2023', '10/03/2024'),
+(4, 4, 4, 249.99, '15/04/2023', '15/04/2024'),
+(5, 5, 5, 199.99, '20/05/2023', '20/05/2024'),
+(6, 6, 6, 349.99, '25/06/2023', '20/06/2024'),
+(7, 7, 7, 299.99, '30/07/2023', '30/07/2024'),
+(8, 8, 8, 399.99, '05/08/2023', '05/08/2024'),
+(9, 9, 9, 499.99, '10/09/2023', '10/09/2024'),
+(10, 10, 10, 199.99, '15/10/2023', '15/10/2024'),
+(11, 11, 11, 249.99, '20/11/2023', '20/11/2024'),
+(12, 12, 12, 299.99, '25/12/2023', '25/12/2024'),
+(13, 13, 13, 199.99, '01/01/2024', '01/01/2025'),
+(14, 14, 14, 349.99, '05/02/2024', '05/02/2025'),
+(15, 15, 15, 249.99, '10/03/2024', '10/03/2025'),
+(16, 16, 16, 199.99, '15/04/2024', '15/04/2025'),
+(17, 17, 17, 299.99, '20/05/2024', '20/05/2025'),
+(18, 18, 18, 399.99, '25/06/2024', '25/06/2025'),
+(19, 19, 19, 499.99, '30/07/2024', '30/07/2025'),
+(20, 20, 20, 199.99, '05/08/2024', '05/08/2025');
 
+INSERT INTO sinistro (data, cliente, celular, local, horario, fornecedor, descricao, apolice) VALUES
+('10/01/2023', 1, 1, 'São Paulo', '10:30', 1, 'Queda acidental do celular', 1),
+('20/02/2023', 2, 2, 'Rio de Janeiro', '14:45', 2, 'Roubo do celular em transporte público', 2),
+('15/03/2023', 3, 3, 'Belo Horizonte', '09:00', 3, 'Dano por água devido a inundação', 3),
+('25/04/2023', 4, 4, 'Curitiba', '16:15', 4, 'Tela quebrada durante uma caminhada', 4),
+('30/05/2023', 5, 5, 'Porto Alegre', '11:50', 5, 'Problema técnico - celular não liga', 5),
+('10/05/2023', 6, 6, 'Brasília', '13:25', 6, 'Furto do celular em shopping center', 6),
+('13/05/2023', 7, 7, 'Recife', '18:30', 7, 'Dano por queda de escada', 7),
+('20/05/2023', 8, 8, 'Salvador', '08:20', 8, 'Celular perdido durante viagem', 8),
+('25/05/2023', 9, 9, 'Fortaleza', '19:10', 9, 'Problema de bateria - não carrega', 9),
+('28/05/2023', 10, 10, 'Manaus', '07:45', 10, 'Tela com defeito - falha de fábrica', 10),
+('10/11/2023', 11, 11, 'Belém', '12:55', 11, 'Celular molhado durante chuva', 11),
+('15/12/2023', 12, 12, 'Goiânia', '17:40', 12, 'Roubo à mão armada', 12),
+('08/03/2023', 13, 13, 'São Luís', '15:00', 13, 'Falha no sistema operacional', 13),
+('10/02/2023', 14, 14, 'Maceió', '13:15', 14, 'Celular danificado por criança', 14),
+('12/03/2023', 15, 15, 'Natal', '10:45', 15, 'Queda de bicicleta com celular no bolso', 15),
+('19/03/2023', 16, 16, 'Aracaju', '16:30', 16, 'Celular esquecido em táxi', 16),
+('26/05/2023', 17, 17, 'Campo Grande', '09:20', 17, 'Quebra da tela durante jogo', 17),
+('30/06/2023', 18, 18, 'Cuiabá', '18:50', 18, 'Dano por sobrecarga elétrica', 18),
+('05/07/2023', 19, 19, 'Florianópolis', '14:35', 19, 'Furto em restaurante', 19),
+('10/08/2023', 20, 20, 'Vitória', '11:10', 20, 'Celular caído na piscina', 20),
+('15/09/2023', 1, 1, 'João Pessoa', '12:45', 1, 'Problema com o alto-falante', 1),
+('21/10/2023', 2, 2, 'Teresina', '15:25', 2, 'Dano causado por animal de estimação', 2),
+('25/11/2023', 3, 3, 'Macapá', '10:00', 3, 'Perda durante evento público', 3),
+('12/12/2023', 4, 4, 'Rio Branco', '17:00', 4, 'Problema na câmera do celular', 4);
 
+INSERT INTO tipo_pagamento (descricao) VALUES
+('Cartão de Crédito'),
+('Cartão de Débito'),
+('Boleto Bancário'),
+('Transferência Bancária'),
+('Pix'),
+('Dinheiro'),
+('Cheque'),
+('Depósito Identificado'),
+('Crédito em Conta'),
+('Débito Automático'),
+('Vale Refeição'),
+('Vale Alimentação'),
+('Paypal'),
+('PagSeguro'),
+('Mercado Pago'),
+('Google Pay'),
+('Apple Pay'),
+('Samsung Pay'),
+('PicPay'),
+('Crédito Loja');
 
-INSERT INTO sinistro (data, cliente, celular, local, horario, fornecedor, descricao) VALUES
-('10/01/2023', 1, 1, 'São Paulo', '10:30', 1, 'Queda acidental do celular'),
-('20/02/2023', 2, 2, 'Rio de Janeiro', '14:45', 2, 'Roubo do celular em transporte público'),
-('15/03/2023', 3, 3, 'Belo Horizonte', '09:00', 3, 'Dano por água devido a inundação'),
-('25/04/2023', 4, 4, 'Curitiba', '16:15', 4, 'Tela quebrada durante uma caminhada'),
-('30/05/2023', 5, 5, 'Porto Alegre', '11:50', 5, 'Problema técnico - celular não liga'),
-('10/06/2023', 6, 6, 'Brasília', '13:25', 6, 'Furto do celular em shopping center'),
-('13/07/2023', 7, 7, 'Recife', '18:30', 7, 'Dano por queda de escada'),
-('20/07/2023', 8, 8, 'Salvador', '08:20', 8, 'Celular perdido durante viagem'),
-('25/09/2023', 9, 9, 'Fortaleza', '19:10', 9, 'Problema de bateria - não carrega'),
-('28/10/2023', 10, 10, 'Manaus', '07:45', 10, 'Tela com defeito - falha de fábrica'),
-('10/11/2023', 11, 11, 'Belém', '12:55', 11, 'Celular molhado durante chuva'),
-('15/12/2023', 12, 12, 'Goiânia', '17:40', 12, 'Roubo à mão armada'),
-('08/03/2023', 13, 13, 'São Luís', '15:00', 13, 'Falha no sistema operacional'),
-('10/02/2023', 14, 14, 'Maceió', '13:15', 14, 'Celular danificado por criança'),
-('12/03/2023', 15, 15, 'Natal', '10:45', 15, 'Queda de bicicleta com celular no bolso'),
-('19/03/2023', 16, 16, 'Aracaju', '16:30', 16, 'Celular esquecido em táxi'),
-('26/05/2023', 17, 17, 'Campo Grande', '09:20', 17, 'Quebra da tela durante jogo'),
-('30/06/2023', 18, 18, 'Cuiabá', '18:50', 18, 'Dano por sobrecarga elétrica'),
-('05/07/2023', 19, 19, 'Florianópolis', '14:35', 19, 'Furto em restaurante'),
-('10/08/2023', 20, 20, 'Vitória', '11:10', 20, 'Celular caído na piscina'),
-('15/09/2023', 1, 1, 'João Pessoa', '12:45', 1, 'Problema com o alto-falante'),
-('21/10/2023', 2, 2, 'Teresina', '15:25', 2, 'Dano causado por animal de estimação'),
-('25/11/2023', 3, 3, 'Macapá', '10:00', 3, 'Perda durante evento público'),
-('12/12/2023', 4, 4, 'Rio Branco', '17:00', 4, 'Problema na câmera do celular');
-
-INSERT INTO pagamento (cliente, celular, valor, tipoPagamento, data, descricao) VALUES
+INSERT INTO pagamento (cliente, celular, valor, tipo_pagamento, data, descricao) VALUES
 (1, 1, 499.99, 1, '2023-01-10', 'Pagamento pelo reparo do celular'),
 (2, 2, 299.99, 2, '2023-02-15', 'Pagamento pelo seguro do celular'),
 (3, 3, 199.99, 3, '2023-03-20', 'Pagamento pela troca de tela do celular'),
@@ -182,4 +197,3 @@ INSERT INTO pagamento (cliente, celular, valor, tipoPagamento, data, descricao) 
 (18, 18, 249.99, 6, '2024-06-30', 'Pagamento pelo conserto de botão'),
 (19, 19, 399.99, 1, '2024-07-05', 'Pagamento pela troca de tela'),
 (20, 20, 599.99, 2, '2024-08-10', 'Pagamento pela compra de celular novo');
-
