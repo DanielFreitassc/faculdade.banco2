@@ -15,7 +15,8 @@ public class PagamentoMapper {
         pagamentoEntity.getValor(),
         pagamentoEntity.getTipo_pagamento(),
         pagamentoEntity.getData(),
-        pagamentoEntity.getDescricao()
+        pagamentoEntity.getDescricao(),
+        pagamentoEntity.getSinistro()
         );
     }
     
@@ -27,6 +28,7 @@ public class PagamentoMapper {
         .tipo_pagamento(pagamentoDTO.tipo_pagamento())
         .data(pagamentoDTO.data())
         .descricao(pagamentoDTO.descricao())
+        .sinistro(pagamentoDTO.sinistro())
         .build();
     }
 }

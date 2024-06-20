@@ -39,5 +39,8 @@ public class SinistroEntity {
     @ManyToOne
     @JoinColumn(name = "fornecedor")
     private FornecedorEntity fornecedor;
-    private String descricao;    
+    private String descricao;
+    @ManyToOne
+    @JoinColumn(name = "apolice")    
+    private ApoliceEntity apolice;
 }

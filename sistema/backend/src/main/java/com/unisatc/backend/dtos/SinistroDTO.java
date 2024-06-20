@@ -3,6 +3,7 @@ package com.unisatc.backend.dtos;
 import java.sql.Time;
 import java.time.LocalDate;
 
+import com.unisatc.backend.models.ApoliceEntity;
 import com.unisatc.backend.models.CelularEntity;
 import com.unisatc.backend.models.ClienteEntity;
 import com.unisatc.backend.models.FornecedorEntity;
@@ -18,7 +19,8 @@ public record SinistroDTO(
     @NotBlank(message = "Local não pode ser um campo vazio") String local,
     Time horario,
     FornecedorEntity fornecedor,
-    String descricao
+    String descricao,
+    ApoliceEntity apolice
 ) {
     
 }

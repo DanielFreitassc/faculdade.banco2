@@ -1,8 +1,6 @@
 package com.unisatc.backend.models;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Entity;
@@ -42,4 +40,7 @@ public class PagamentoEntity {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate data;
     private String descricao;
+    @ManyToOne
+    @JoinColumn(name = "sinistro")
+    private SinistroEntity sinistro;
 }

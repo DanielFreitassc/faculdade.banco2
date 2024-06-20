@@ -16,7 +16,8 @@ public class SinistroMapper {
         sinistroEntity.getLocal(),
         sinistroEntity.getHorario(),
         sinistroEntity.getFornecedor(),
-        sinistroEntity.getDescricao()
+        sinistroEntity.getDescricao(),
+        sinistroEntity.getApolice()
         );
     }
 
@@ -29,6 +30,7 @@ public class SinistroMapper {
         .horario(sinistroDTO.horario())
         .fornecedor(sinistroDTO.fornecedor())
         .descricao(sinistroDTO.descricao())
+        .apolice(sinistroDTO.apolice())
         .build();
     }
 }
