@@ -11,7 +11,7 @@ Augustos Preis - [@AugustoPreis](https://github.com/AugustoPreis)
 
 ### Modelo Físico
 Utilizamos a ferramenta de modelagem de dados [dbdiagram.io](https://dbdiagram.io/) para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.<br>
-Arquivo fonte: [Modelo Fisico](https://dbdiagram.io/d/6660f7fe8f6e135d4a671308).<br>
+Arquivo fonte: [Modelo Fisico]([https://dbdiagram.io/d/6660f7fe8f6e135d4a671308](https://dbdiagram.io/d/Copy-of-Untitled-Diagram-667372d75a764b3c72ed8452)).<br>
 
 ![Nodelo Fisico](image.png)
   
