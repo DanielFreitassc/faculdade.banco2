@@ -18,3 +18,20 @@ BEGIN
 	RETURN total;
 END;
 $function$;
+
+CREATE OR REPLACE FUNCTION fn_formata_celular(pr_celular int)
+RETURNS varchar
+LANGUAGE plpgsql
+AS $function$
+DECLARE
+	formatado varchar(150);
+BEGIN
+	SELECT
+		CONCAT_WS(' ', celular.marca, celular.modelo, celular.ano)
+	INTO formatado
+	FROM celular
+	WHERE celular.id = pr_celular;
+
+	RETURN formatado;
+END;
+$function$;
