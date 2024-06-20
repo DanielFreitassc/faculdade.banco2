@@ -35,3 +35,37 @@ BEGIN
 	RETURN formatado;
 END;
 $function$;
+
+CREATE OR REPLACE FUNCTION fn_lucro_celular(pr_celular int)
+RETURNS numeric(10, 2)
+LANGUAGE plpgsql
+AS $function$
+DECLARE
+	valor numeric(10, 2);
+BEGIN
+	SELECT
+		sum(pagamento.valor)
+	INTO valor
+	FROM pagamento
+	WHERE pagamento.celular = pr_celular;
+
+	RETURN COALESCE(valor, 0);
+END;
+$function$;
+
+CREATE OR REPLACE FUNCTION fn_prejuizo_celular(pr_celular int)
+RETURNS numeric(10, 2)
+LANGUAGE plpgsql
+AS $function$
+DECLARE
+	valor numeric(10, 2);
+BEGIN
+	SELECT
+		sum(apolice.valor)
+	INTO valor
+	FROM apolice
+	WHERE apolice.celular = pr_celular;
+
+	RETURN COALESCE(valor, 0);
+END;
+$function$;
