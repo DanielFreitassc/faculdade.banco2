@@ -63,8 +63,9 @@ BEGIN
 	SELECT
 		sum(apolice.valor)
 	INTO valor
-	FROM apolice
-	WHERE apolice.celular = pr_celular;
+	FROM sinistro
+		INNER JOIN apolice ON apolice.id = sinistro.apolice
+	WHERE sinistro.celular = pr_celular;
 
 	RETURN COALESCE(valor, 0);
 END;
