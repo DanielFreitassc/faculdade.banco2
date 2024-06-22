@@ -30,7 +30,7 @@ Abaixo, segue os scripts SQL separados por tipo:
 + Functions [functions.sql](scripts_sql/functions.sql)
 
 ### Código Fonte do CRUD
-- Linguagem de Programação Java, Javascript.<br>
+- Linguagem de Programação Java 21, Javascript.<br>
 - Framework Spring,
 - Lib React
   
