@@ -19,7 +19,7 @@ Arquivo fonte: [Modelo Fisico](https://dbdiagram.io/d/Copy-of-Untitled-Diagram-6
 As informações sobre as tabelas e índices foram documentados na planilha [dicionarioDeDados.xlsx](dicionario_dados/dicionarioDeDados.xlsx).
 
 ### Scripts SQL
-Para este projeto foi utilizado o banco de dados [Postgres SQL](https://www.postgresql.org/) <br>
+Para este projeto foi utilizado o banco de dados [Postgres SQL](https://www.postgresql.org/) 16.3<br>
 
 Abaixo, segue os scripts SQL separados por tipo:
 + DDL [ddl.sql](scripts_sql/ddl.sql)
@@ -30,9 +30,8 @@ Abaixo, segue os scripts SQL separados por tipo:
 + Functions [functions.sql](scripts_sql/functions.sql)
 
 ### Código Fonte do CRUD
-- Linguagem de Programação Java 21, Javascript.<br>
-- Framework Spring,
-- Lib React
+- Linguagem de Programação Java 21.<br>
+- Framework Springboot 3.3.0,
   
 [Documentação da API](https://danielfreitassc.github.io/ProjetoFinalBD2/cliente/)
 
