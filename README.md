@@ -28,7 +28,7 @@ Abaixo, segue os scripts SQL separados por tipo:
 + Triggers [triggers.sql](scripts_sql/triggers.sql)
 + Stored Procedures [stored_procedures.sql](scripts_sql/stored_procedures.sql)
 + Functions [functions.sql](scripts_sql/functions.sql)
-+ DQL [dql.sql](scripts/dql.sql)
++ DQL [dql.sql](scripts_sql/dql.sql)
 
 ### Código Fonte do CRUD
 - Linguagem de Programação Java 21.<br>
