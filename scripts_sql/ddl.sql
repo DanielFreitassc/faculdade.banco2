@@ -1,3 +1,4 @@
+-- Create table
 Create table cliente (
 
 Id serial PRIMARY KEY,
@@ -120,3 +121,16 @@ create table total_tipo_pagamento (
 	tipo_pagamento int not null references tipo_pagamento,
 	valor numeric (10,2) not null
 );
+
+
+
+-- Drop tables
+DROP TABLE IF EXISTS total_tipo_pagamento;
+DROP TABLE IF EXISTS pagamento;
+DROP TABLE IF EXISTS sinistro;
+DROP TABLE IF EXISTS apolice;
+DROP TABLE IF EXISTS tipo_pagamento;
+DROP TABLE IF EXISTS fornecedor;
+DROP TABLE IF EXISTS funcionario;
+DROP TABLE IF EXISTS celular;
+DROP TABLE IF EXISTS cliente;
