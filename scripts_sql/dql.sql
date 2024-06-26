@@ -1,4 +1,10 @@
 --PERGUNTA 1
+/*
+1- Quantidade de apólices emitidas para sinistros cadastrados em maio: Considerando o histórico de sinistros registrados no mês de maio, 
+gostaria de saber quantas apólices foram efetivamente emitidas para cobrir esses sinistros? 
+Essa análise pode nos ajudar a entender a eficácia do sistema de seguro em relação aos eventos ocorridos.
+*/
+
 SELECT
 	tab.*
 FROM (
@@ -21,6 +27,10 @@ WHERE tab.qtd_sinistros > 0
 ORDER BY tab.qtd_sinistros DESC;
 
 --PERGUNTA 2
+/*
+2 - Tipos de pagamentos relacionados a apólices de seguro em um mês específico: Para um mês X (por exemplo, junho), 
+quais são os diferentes tipos de pagamentos associados a apólices de seguro de celulares?
+*/
 SELECT
 	fn_formata_celular(apolice.celular),
 	(
@@ -39,6 +49,11 @@ SELECT
 FROM apolice
 
 --PERGUNTA 3
+/*
+3 - Modelos de celulares com maior margem de prejuizo: Vamos analisar os dados para identificar 
+quais modelos específicos de celulares geram maior prejuizo para a empresa. 
+Isso envolve considerar os custos de aquisição, os prêmios de seguro associados a esses modelos e as taxas de sinistros.
+*/
 SELECT
 	fn_formata_celular(celular.id) AS nome,
 	fn_lucro_celular(celular.id) AS lucro,
@@ -47,6 +62,11 @@ FROM celular
 ORDER BY 3 DESC;
 
 --PERGUNTA 4
+/*
+4 - Desempenho dos funcionários em relação a apólices de seguro para um mesmo celular: Quais funcionários tiveram mais apólices 
+cadastradas para um mesmo celular específico durante o mês X (do fornecedor Y)? Essa análise pode ajudar a otimizar a 
+distribuição de tarefas e avaliar o desempenho da equipe.
+*/
 SELECT
 	funcionario.nome,
 	(
@@ -58,3 +78,9 @@ SELECT
 	) AS qtd_apolices
 FROM funcionario
 ORDER BY 2 DESC;
+
+--Select usando os indeces
+EXPLAIN SELECT * FROM sinistro WHERE Data = '2024-01-01';
+EXPLAIN SELECT * FROM funcionario WHERE Nome = 'Maria Oliveira';
+EXPLAIN SELECT * FROM cliente WHERE Cpf = '12345678900';
+EXPLAIN SELECT * FROM celular WHERE Marca = 'Samsung';
