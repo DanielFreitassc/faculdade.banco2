@@ -6,3 +6,11 @@ nav:
     - Como executar: index.md
     - Entidade cliente: cliente.md
     - Entidade celular: celular.md
+    - Entidade funcionario: funcionario.md
+    - Entidade fornecedor: fornecedor.md
+    - Entidade apolice: apolice.md
+    - Entidade sinistro: sinistro.md
+    - Entidade tipo_pagemeto: tipo_pagemeto.md
+    - Entidade Pagamento: pagamento.md
+    - Ver total pagamentos: total_pagamentos.md
+    
